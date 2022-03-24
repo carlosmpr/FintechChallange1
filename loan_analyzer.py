@@ -84,7 +84,7 @@ Perform financial calculations using functions.
     a. Use an `annual_discount_rate` of 0.2 for this new loan calculation.
 """
 
-# Given the following loan data, you will need to calculate the present value for the loan
+
 new_loan = {
     "loan_price": 800,
     "remaining_months": 12,
@@ -97,7 +97,7 @@ def calculate_present_value(future_value,remaining_months,annual_discount_rate):
     present_value = future_value/(1+annual_discount_rate/12) ** remaining_months
     return present_value
 
-new_present_value = calculate_present_value(loan["future_value"], loan["remaining_months"],0.2)
+new_present_value = calculate_present_value(new_loan["future_value"], new_loan["remaining_months"],0.2)
 print(f"The present value of the loan is: {new_present_value}")
 
 
